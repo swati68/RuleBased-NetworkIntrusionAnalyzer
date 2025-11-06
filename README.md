@@ -28,10 +28,10 @@ The architecture consists of **three major modules**:
 
 ```mermaid
 flowchart LR
-A[Rules File] --> B[Rule Converter]
-B --> C[Parsed PCAP File (JSON)]
-C --> D[Rule Evaluation Engine]
-D --> E[Attack Detection Report]
+    A[Rules File] --> B[Rule Converter]
+    B --> C[Parsed PCAP File (JSON)]
+    C --> D[Rule Evaluation Engine]
+    D --> E[Attack Detection Report]
 ```
 
 ---
