@@ -1,0 +1,11 @@
+name: ARP Storm
+description: Possible ARP Storm attack, find attacker from AB source MAC address.
+group:
+eth.addr
+packets:
+A:arp
+AB:arp and eth.dst==ff:ff:ff:ff:ff:ff
+asserts:
+count(AB)>count(A)*0.5
+threshold: 1
+report: packets

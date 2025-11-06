@@ -1,0 +1,10 @@
+name: SYN FLOOD
+description: Possible Syn Flood attack, find attacker from NS source MAC address.
+group:
+packets:
+NS:tcp.flags.syn==1 
+NSA:tcp.flags.fin==0 
+asserts:
+count(NS)>0 and count(NSA)>0 and count(NSA)>=count(NS)
+threshold: 1
+report: packets

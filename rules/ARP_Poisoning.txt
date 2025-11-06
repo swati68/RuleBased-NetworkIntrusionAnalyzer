@@ -1,0 +1,10 @@
+name: ARP Poisoning
+description: Possible ARP Poisoning attack, find attacker from DA source MAC address.
+group:
+packets:
+A:arp
+DA:arp.duplicate-address-detected
+asserts:
+count(DA)>count(A)*0.5
+threshold: 1
+report: packets
